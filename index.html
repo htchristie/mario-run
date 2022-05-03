@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Run</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="/script.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+</head>
+
+</head>
+<body>
+  <main id="game-area" class="game-area">
+    <img src="/imgs/background.png" alt="" class="background">
+    <img src="/imgs/background.png" alt="" class="background">
+    <div id="score" class="score">0</div>
+    <div id="lives-container" class="lives-container">
+      <img src="/imgs/BerryRed.gif" alt="Life" id="life-1" class="life">
+      <img src="/imgs/BerryRed.gif" alt="Life" id="life-2" class="life">
+      <img src="/imgs/BerryRed.gif" alt="Life" id="life-3" class="life">
+    </div>
+    <div id="start-screen" class="start-screen">
+      <h2>MARIO RUN</h2>
+      <p>Space bar: Jump <br> Right Arrow: Shoot</p>
+      <p>PRESS <span>ENTER</span> TO START</p>
+    </div>
+    <div id="gameover-screen" class="gameover-screen hide">
+      <h2>GAME OVER</h2>
+      <p>Your score was <span id="score-tag">0</span></p>
+      <p>PRESS <span>ENTER</span> TO <br> TRY AGAIN</p>
+    </div>
+    <div id="mario" class="mario pixelart">
+      <img src="/imgs/mario-standing-sprite.png" alt="Mario" id="mario-sprites" class="mario-sprites">
+    </div>
+  </main>
+</body>
+</html>

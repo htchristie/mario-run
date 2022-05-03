@@ -1,0 +1,163 @@
+:root {
+  --mario-width: 50px;
+  --mario-height: 66px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  padding: none;
+  margin: none;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  min-height: 97vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:black;
+}
+
+.game-area {
+  position: relative;
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.background {
+  --left: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: calc(var(--left) * 1%);
+}
+
+.start-screen,
+.gameover-screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  background-color: rgba(207, 207, 207, 0.55);
+  text-align: center;
+  padding: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: rgb(187, 0, 0);
+}
+
+h2 + p {
+  font-size: .8rem;
+}
+
+span {
+  color: rgba(187, 0, 0, 0.842);
+}
+
+.gameover-screen {
+  position: absolute;
+}
+
+.score {
+  position: absolute;
+  top: 5%;
+  right: 50%;
+  transform: translate(50%, 0);
+  color: black;
+  font-size: 1rem;
+}
+
+.lives-container {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  gap: .5rem;
+}
+
+.life {
+  width: 18px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.mario {
+  --bottom: 10;
+  position: absolute;
+  bottom: calc(var(--bottom) * 1%);
+  width: var(--mario-width);
+  height: var(--mario-height);
+  overflow: hidden;
+  image-rendering: pixelated;
+}
+
+.mario-sprites {
+  min-width: var(--mario-width);
+  height: var(--mario-height);
+}
+
+.coin{
+  --left: 100%;
+  --bottom: 0;
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  bottom: calc(var(--bottom) * 1%);
+  width: 18px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.fireball {
+  --bottom: 0;
+  --left: 0;
+  position: absolute;
+  bottom: calc(var(--bottom) * 1%);
+  left: calc(var(--left) * 1%);
+  width: 15px;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.enemy {
+  --left: 100%;
+  --bottom: 0;
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  bottom: calc(var(--bottom) * 1%);
+  image-rendering: pixelated;
+}
+
+.koopa {
+  height: 50px;
+  width: auto;
+  bottom: 10%;
+}
+
+.banzai-bill {
+  height: 70px;
+  width: auto;
+}
+
+.dead {
+  content: url("/imgs/mario-death-sprite.png");
+}
+
+.hide {
+  display: none;
+}
+
+
